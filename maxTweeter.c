@@ -75,7 +75,7 @@ int NAME_COLUMN = -1;
 #define MAX_columnLength ( MAX_lineLength - (EXPECTED_columnCount-1) )
 
 
-bool debugging = true;
+bool debugging = false;
 //set to false before submittting to prevent debugging output
 //set to true to allow custom debugging messages
 
