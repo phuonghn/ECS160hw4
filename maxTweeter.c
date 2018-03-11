@@ -510,7 +510,7 @@ void invalidInputMessage( const char* messageIfDebugging )
     }
     else
     {
-        printf("Invalid Input Format");
+        printf("Invalid Input Format\n");
     }
 }
 
