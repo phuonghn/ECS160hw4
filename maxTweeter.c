@@ -105,19 +105,19 @@ int main( int argc, char *argv[] )
     }
     
     char line[ BUFFER_SIZE ];//buffer for one line
-        //will be used to repeatedly read in lines
-        //one at a time from a huge file
+    //will be used to repeatedly read in lines
+    //one at a time from a huge file
     
     /*
      fgets returns false when:
-        end-of-file hit && no characters read in yet
+     end-of-file hit && no characters read in yet
      fgets copies one csv row from file to line
      BUFFER_SIZE limits number of characters taken in
      */
     
     
     int lineCountdown = MAX_rowCount;
-        //to enforce total row limit
+    //to enforce total row limit
     
     if ( fgets(line,BUFFER_SIZE,file) )
     {
@@ -229,7 +229,7 @@ int main( int argc, char *argv[] )
 /*
  processes one line from the csv
  ASSUMPTIONS:
-    line is valid
+ line is valid
  */
 void processValidLine( char* line, struct Slot* hashtable )
 {
@@ -266,7 +266,7 @@ void processValidLine( char* line, struct Slot* hashtable )
  number of columns in line != number of expected columns
  (unless this is the header)
  ASSUMPTIONS:
-    line has length BUFFER_SIZE
+ line has length BUFFER_SIZE
  */
 void ASSERT_lineIsValid( char* line )
 {
@@ -306,9 +306,9 @@ void ASSERT_lineIsValid( char* line )
     }
     
     /*
-    i--;//remove '\n' or '\0' from loop
-    i++;//we want i to represent character count, not last index
-    //these even out
+     i--;//remove '\n' or '\0' from loop
+     i++;//we want i to represent character count, not last index
+     //these even out
      */
     
     if ( i <= 0 )//line is empty
@@ -443,9 +443,9 @@ void establishExpectations( char* headerLine )
                 if ( matchPossible && headerLine[i] == '\"' )
                 {
                     i++;//skip quotations, start matching immediately
-                        //there can't be chars between " and name
+                    //there can't be chars between " and name
                     betweenQuotations = true;
-                        //creates expectation of closing quotation
+                    //creates expectation of closing quotation
                 }
                 
                 if ( matchPossible && name[n] == headerLine[i] )
